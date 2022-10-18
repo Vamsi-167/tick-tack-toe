@@ -29,9 +29,11 @@ class Tic_Tac_Toe():
         self.tie = False
         self.X_wins = False
         self.O_wins = False
+        self.pass_wins = False
 
         self.X_score = 0
         self.O_score = 0
+        self.pass_score = 0
         self.tie_score = 0
 
     def mainloop(self):
@@ -83,7 +85,7 @@ class Tic_Tac_Toe():
             self.O_score += 1
             text = 'Winner: Player 2 (O)'
             color = symbol_O_color
-        else:
+        else
             self.tie_score += 1
             text = 'Its a tie'
             color = 'gray'
@@ -140,6 +142,12 @@ class Tic_Tac_Toe():
 
         if self.board_status[0][2] == self.board_status[1][1] == self.board_status[2][0] == player:
             return True
+
+        if self.board_status[1][1] == self.board_status[1][1] == self.board_status[2][2] == player:
+            return False
+        
+        if self.board_status[1][0] == self.board_status[1][1] == self.board_status[2][2] == player:
+            return fale
 
         return False
 
