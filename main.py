@@ -82,6 +82,14 @@ class Tic_Tac_Toe():
             text = 'Winner: Player 1 (X)'
             color = symbol_X_color
         elif self.O_wins:
+            self.O_score += 2
+            text = 'Winner: Player 2 (1)'
+            color = symbol_O1_color
+        elif self.O_wins:
+            self.O_score += 
+            text = 'Winner: Player 2 (0)'
+            color = symbol_O2_color
+        elif self.O_wins:
             self.O_score += 1
             text = 'Winner: Player 2 (O)'
             color = symbol_O_color
