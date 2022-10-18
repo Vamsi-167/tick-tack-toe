@@ -168,24 +168,19 @@ class Tic_Tac_Toe():
 
         return tie
 
-    def is_gameover(self):
-        # Either someone wins or all grid occupied
-        self.X_wins = self.is_winner('X')
-        if not self.X_wins:
-            self.O_wins = self.is_winner('O')
-
-        if not self.O_wins:
-            self.tie = self.is_tie()
-
-        gameover = self.X_wins or self.O_wins or self.tie
-
-        if self.X_wins:
-            print('X wins')
-        if self.O_wins:
-            print('O wins')
-        if self.tie:
-            print('Its a tie')
-
+    
+        int temp;
+		int nul = 0;
+		int b = a-1;
+       
+       while (nul < b)
+       {
+           temp = arr[nul];
+           arr[nul] = arr[b];
+           arr[b] = temp;
+           nul++;
+           b--;
+       }
         return gameover
 
     score_text = 'Player 1 (X) : ' + str(self.X_score) + '\n'
